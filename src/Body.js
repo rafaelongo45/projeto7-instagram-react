@@ -212,10 +212,8 @@ function User() {
 function Sugestions() {
     return (
         <div class="sugestoes">
-            <div class="titulo">
-                Sugestões para você
-                <div>Ver tudo</div>
-            </div>
+            
+            <SugestionsTitle />
 
             <div class="sugestao">
                 <div class="usuario">
@@ -278,6 +276,15 @@ function Sugestions() {
             </div>
         </div>
     );
+}
+
+function SugestionsTitle() {
+    return (
+        <div class="titulo">
+            Sugestões para você
+            <div>Ver tudo</div>
+        </div>
+    )
 }
 
 function Links() {
