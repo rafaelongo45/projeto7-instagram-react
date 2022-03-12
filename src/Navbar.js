@@ -75,8 +75,6 @@ function MobileIcons() {
 }
 
 
-function Icon(props) {
-    return (
-        <ion-icon name={props.name}></ion-icon>
-    )
+function Icon({name}) {
+    return <ion-icon name={name}> </ion-icon>
 }

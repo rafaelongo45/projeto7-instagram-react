@@ -1,15 +1,12 @@
 export default function FooterMobile() {
     return (
         <div className="fundo-mobile">
-            <Icon />
+            <Icons />
         </div>
     );
 }
 
-function Icon(){
+function Icons() {
     const iconNames = ["home", "search-outline", "add-circle-outline", "heart-outline", "person-outline"];
-    const iconRender = iconNames.map((icon) => {
-        return <ion-icon name = {icon}></ion-icon>
-    })
-    return iconRender;
+    return iconNames.map(icon => <ion-icon name={icon}></ion-icon>)
 }
