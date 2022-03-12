@@ -1,7 +1,7 @@
 export default function Navbar() {
     return (
         <div>
-            <div class="navbar">
+            <div className="navbar">
                 <Container />
             </div>
         </div>
@@ -10,10 +10,10 @@ export default function Navbar() {
 
 function Container() {
     return (
-        <div class="container">
-            <Logo />
+        <div className="container">
+            <Logo src = "assets/img/logo.png"/>
             <MobileLogoIcon />
-            <MobileLogoImage />
+            <MobileLogoImage src ="assets/img/logo.png"/>
             <SearchBar />
             <Icons />
             <MobileIcons />
@@ -21,35 +21,35 @@ function Container() {
     )
 }
 
-function Logo() {
+function Logo(props) {
     return (
-        <div class="logo">
+        <div className="logo">
             <Icon name="logo-instagram" />
-            <div class="separador"></div>
-            <img src="assets/img/logo.png" />
+            <div className="separador"></div>
+            <img src= {props.src}/>
         </div>
     );
 }
 
 function MobileLogoIcon() {
     return (
-        <div class="logo-mobile">
+        <div className="logo-mobile">
             <Icon name="logo-instagram" />
         </div>
     );
 }
 
-function MobileLogoImage() {
+function MobileLogoImage(props) {
     return (
-        <div class="instagram-mobile">
-            <img src="assets/img/logo.png" />
+        <div className="instagram-mobile">
+            <img src={props.src} />
         </div>
     );
 }
 
 function SearchBar() {
     return (
-        <div class="pesquisa">
+        <div className="pesquisa">
             <input type="text" placeholder="Pesquisar" />
         </div>
     );
@@ -57,7 +57,7 @@ function SearchBar() {
 
 function Icons() {
     return (
-        <div class="icones">
+        <div className="icones">
             <Icon name="paper-plane-outline" />
             <Icon name="compass-outline" />
             <Icon name="heart-outline" />
@@ -68,7 +68,7 @@ function Icons() {
 
 function MobileIcons() {
     return (
-        <div class="icones-mobile">
+        <div className="icones-mobile">
             <Icon name="paper-plane-outline" />
         </div>
     );

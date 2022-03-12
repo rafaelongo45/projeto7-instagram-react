@@ -55,10 +55,6 @@ function Story() {
 }
 
 function Posts() {
-    return <Post />
-}
-
-function Post() {
     const userPost = [
         {
             userImg: "assets/img/meowed.svg", userName: "meowed", userPostImg: "assets/img/gato-telefone.svg", commentUserImg: "assets/img/respondeai.svg",
@@ -140,7 +136,7 @@ function Sidebar() {
             <User src="assets/img/catanacomics.svg" userName="catanacomics" name="Catana" />
             <Sugestions />
             <Links />
-            <Copyright />
+            <Copyright text = "© 2021 INSTAGRAM DO FACEBOOK"/>
         </div>
     );
 }
@@ -160,10 +156,8 @@ function User(props) {
 function Sugestions() {
     return (
         <div class="sugestoes">
-
             <SuggestionsTitle title="Sugestões para você" subTitle="Ver tudo" />
             <Suggestion />
-
         </div>
     );
 }
@@ -205,17 +199,15 @@ function Suggestion() {
 }
 
 function Links() {
-    return (
-        <div class="links">
-            Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
-        </div>
-    );
+    const arrayLinks = ["Sobre ", "• ", "Ajuda ", "• ", "Imprensa ", "• ", "API ", "• ", "Carreiras ", "• ", "Privacidade ", "• ", 
+    "Termos ", "• ", "Localizações ", "• ", "Contas mais relevantes ", "• ", "Hashtags ", "• ", "Idioma"]
+    return ( <div class="links"> {arrayLinks.map(link => link)} </div> );
 }
 
-function Copyright() {
+function Copyright({text}) {
     return (
         <div class="copyright">
-            © 2021 INSTAGRAM DO FACEBOOK
+            {text}
         </div>
     );
 }
